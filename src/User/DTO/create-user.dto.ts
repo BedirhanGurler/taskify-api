@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 import { IsEmail, IsNotEmpty, MinLength } from 'class-validator';
 
 export class CreateUserDto {
@@ -10,4 +9,8 @@ export class CreateUserDto {
 
   @MinLength(6)
   password: string;
+
+  isActive: boolean;
+  dateCreated: Date;
+  dateModified: Date;
 }
